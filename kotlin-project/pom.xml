@@ -15,7 +15,7 @@
 	<parent>
 		<groupId>com.github.juzraai</groupId>
 		<artifactId>maven-parents</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<version>1.0</version>
 	</parent>
 
 	<properties>
