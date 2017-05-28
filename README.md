@@ -6,26 +6,18 @@
 
 ## 1. Usage
 
-### 1.1. Method "A": download and install
+### 1.1. Resolve dependencies
 
-1. Download **[the pack](https://github.com/juzraai/maven-parents/archive/master.zip)**
+**Method "A": download and install**
+
+1. Download **[the latest release](https://github.com/juzraai/maven-parents/releases/latest)**
 2. Extract the archive
 3. Step into the directory
-4. Run `mvn install` from terminal
-5. Add the desired parent to your project
+4. Run `mvn install` from terminal (root POM will install all parents)
 
-```xml
-<parent>
-	<groupId>com.github.juzraai.maven-parents</groupId>
-	<artifactId>PARENT-NAME</artifactId>
-	<version>VERSION</version> <!-- see .version file in the pack -->
-</parent>
-```
+**Method "B": Use [JitPack.io](https://jitpack.io/#juzraai/maven-parents) repository**
 
-
-### 1.2. Method "B": use [JitPack.io](https://jitpack.io/#juzraai/maven-parents)
-
-1. Add JitPack repository to your project
+1. Just add the repository to your POM or your `settings.xml`
 
 ```xml
 <repositories>
@@ -36,13 +28,18 @@
 </repositories>
 ```
 
-2. Add the desired parent to your project
+Here's how to add it globally: [Setting up Multiple Repositories](https://maven.apache.org/guides/mini/guide-multiple-repositories.html)
+
+
+### 1.2. Reference a parent in your project
+
+Add the desired parent to your project:
 
 ```xml
 <parent>
 	<groupId>com.github.juzraai.maven-parents</groupId>
 	<artifactId>PARENT-NAME</artifactId>
-	<version>VERSION</version> <!-- as above or you can specify commit ID too -->
+	<version>VERSION</version>
 </parent>
 ```
 
@@ -63,3 +60,4 @@
 * turns on Kotlin compiler's incremental option
 * adds Kotlin dependencies and JUnit
 * adds build plugin for Kotlin, creating JAR and creating JAR with dependencies
+* you need to override `main.class` property in your POM
