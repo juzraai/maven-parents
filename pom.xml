@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.github.juzraai</groupId>
+	<artifactId>maven-parents</artifactId>
+	<version>1.0-SNAPSHOT</version>
+
+	<packaging>pom</packaging>
+
+	<name>maven-parents</name>
+	<description>Builder project and also common features off all Maven parent POMs.</description>
+
+	<modules>
+		<module>kotlin-project</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- versions -->
+		<jcommander.version>1.69</jcommander.version>
+		<junit.version>4.12</junit.version>
+		<kotlin.logging.version>1.4.4</kotlin.logging.version>
+		<kotlin.version>1.1.2-4</kotlin.version>
+		<slf4j.version>1.7.25</slf4j.version>
+		<toolbox.version>3db9c2fa62</toolbox.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.beust</groupId>
+				<artifactId>jcommander</artifactId>
+				<version>${jcommander.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>io.github.microutils</groupId>
+				<artifactId>kotlin-logging</artifactId>
+				<version>${kotlin.logging.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jetbrains.kotlin</groupId>
+				<artifactId>kotlin-stdlib</artifactId>
+				<version>${kotlin.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jetbrains.kotlin</groupId>
+				<artifactId>kotlin-test-junit</artifactId>
+				<version>${kotlin.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.juzraai</groupId>
+				<artifactId>toolbox</artifactId>
+				<version>${toolbox.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
