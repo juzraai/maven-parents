@@ -13,9 +13,9 @@
 	<description>Kotlin project base with build plugins.</description>
 
 	<parent>
-		<groupId>com.github.juzraai</groupId>
+		<groupId>com.github.juzraai.maven-parents</groupId>
 		<artifactId>maven-parents</artifactId>
-		<version>1.0</version>
+		<version>1.0.1</version>
 	</parent>
 
 	<properties>
