@@ -61,3 +61,17 @@ Add the desired parent to your project:
 * adds Kotlin dependencies and JUnit
 * adds build plugin for Kotlin, creating JAR and creating JAR with dependencies
 * you need to override `main.class` property in your POM
+
+
+
+## 4. Versioning
+
+* **Major:** increased on incompatible structural changes
+* **Minor:** increased when new feature (e.g. dependency version) added
+* **Patch:** increased when I fix a bug or only increase a dependency version
+
+
+
+## 5. Contributing
+
+If you find a bug, please open a ticket above.
